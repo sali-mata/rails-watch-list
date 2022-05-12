@@ -1,0 +1,9 @@
+<h4> add a bookmark :</h4>
+
+<%= simple_form_for [ @list, @bookmark ] do |f|%>
+<%= f.association :movie  %>
+<%= f.input :comment %>
+<%= f.button :submit %>
+<% end %>
+
+<%= link_to 'cancel', list_path(@list) %>
